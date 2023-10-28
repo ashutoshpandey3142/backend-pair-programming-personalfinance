@@ -1,0 +1,27 @@
+
+Q) What is the use of @Required annotation
+The @Required annotation is used in the Spring Framework to indicate that the annotated
+element (usually a setter method) is required to be injected with a value, and
+it should not be null. It's often used in the context of dependency injection and bean configuration.
+
+
+
+Q)Difference between Controller and RestController
+@RestController:
+1) The @RestController annotation is a specialized version of the @Controller annotation.
+2) Controllers annotated with @RestController are typically used for building RESTful web services or APIs.
+3) Controller methods annotated with @RestController automatically
+apply the @ResponseBody annotation to their return values.
+
+
+Q) Difference in Hibernate and JpaReposiory with Example
+Hibernate is a more comprehensive ORM framework that can be used independently, whereas Spring Data
+JPA, including JpaRepository, is a part of the Spring ecosystem, which simplifies data
+access using JPA. Spring Data JPA builds on top of JPA and reduces the amount of boilerplate code.
+Example:
+Hibernate query
+List<Employee> employees = session.createQuery("from Employee", Employee.class).list();
+
+Spring Data JPA query
+List<Employee> findByLastName(String lastName);
+
